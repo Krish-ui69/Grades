@@ -4,84 +4,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unlock Your Academic Potential</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        /* General Styles */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Poppins', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
             color: #333;
+            background-color: #f4f4f4; /* Light background for a clean look */
         }
+
+        /* Header Styles */
         header {
-            background: linear-gradient(90deg, #4CAF50, #81C784);
+            background: #2c3e50; /* Solid dark background for a professional look */
             color: #fff;
-            padding: 1rem 0;
+            padding: 5rem 1rem;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-out;
         }
         header h1 {
-            font-size: 2.5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
             margin: 0;
+            color: #fff;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            line-height: 1.2;
         }
-        .container {
-            padding: 2rem;
+
+        /* Message Section */
+        .message-section {
+            padding: 3rem 1rem;
             max-width: 800px;
-            margin: auto;
+            margin: 0 auto;
             text-align: center;
+            color: #34495e;
+            animation: fadeIn 1s ease-out;
         }
+        .message-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        .message-section p {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        /* Video Container */
+        .video-container {
+            text-align: center;
+            margin: 2rem auto;
+        }
+        .video-container iframe {
+            width: 100%;
+            max-width: 900px;
+            height: 500px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Call to Action Section */
+        .cta-container {
+            padding: 3rem 1rem;
+            max-width: 900px;
+            margin: 3rem auto;
+            text-align: center;
+            animation: fadeIn 1s ease-out;
+        }
+        .cta-container h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            color: #34495e;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        .cta-container p {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        /* Buttons */
         .btn {
             display: inline-block;
-            background: #4CAF50;
+            background: #2980b9;
             color: #fff;
-            padding: 0.75rem 1.5rem;
+            padding: 1rem 2rem;
             text-decoration: none;
-            border-radius: 25px;
+            border-radius: 30px;
             margin: 1rem 0;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             font-weight: bold;
-            transition: background 0.3s ease;
+            transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeIn 1s ease-out;
         }
         .btn:hover {
-            background: #45a049;
+            background: #3498db;
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
         }
-        ul, ol {
-            text-align: left;
-            margin: 1rem auto;
-            padding-left: 1.5rem;
-        }
-        blockquote {
-            font-style: italic;
-            background: #f9f9f9;
-            border-left: 5px solid #4CAF50;
-            margin: 1.5rem 0;
-            padding: 1rem;
-            color: #555;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background: #f4f4f4;
-            margin-top: 2rem;
-            font-size: 0.9rem;
-        }
-        .highlight {
-            background: #81C784;
-            color: #fff;
-            padding: 0.2rem 0.5rem;
-            border-radius: 5px;
-        }
+
+        /* Payment Section */
         .payment-section {
-            background: #f9f9f9;
-            padding: 2rem;
-            margin: 2rem auto;
+            background: #fff;
+            padding: 3rem;
+            margin: 3rem auto;
             max-width: 600px;
             border: 1px solid #ddd;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-out;
         }
         .payment-section h2 {
-            color: #4CAF50;
-            margin-bottom: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            font-weight: 600;
         }
         .payment-section form {
             display: flex;
@@ -89,27 +139,78 @@
         }
         .payment-section label {
             margin-bottom: 0.5rem;
-            font-weight: bold;
+            font-weight: 500;
+            color: #34495e;
         }
         .payment-section input {
             padding: 0.75rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             border: 1px solid #ccc;
             border-radius: 5px;
             font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        .payment-section input:focus {
+            border-color: #2980b9;
         }
         .payment-section button {
-            background: #4CAF50;
+            background: #2980b9;
             color: #fff;
             padding: 0.75rem;
             border: none;
             border-radius: 5px;
             font-size: 1.2rem;
             cursor: pointer;
-            transition: background 0.3s ease;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
         }
         .payment-section button:hover {
-            background: #45a049;
+            background: #3498db;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #2c3e50;
+            color: #fff;
+            margin-top: 3rem;
+            font-size: 1rem;
+            animation: fadeIn 1s ease-out;
+        }
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            .cta-container {
+                padding: 2rem 1rem;
+            }
+            .btn {
+                font-size: 1.2rem;
+                padding: 0.75rem 1.5rem;
+            }
+            .payment-section {
+                padding: 2rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
@@ -117,17 +218,30 @@
     <header>
         <h1>Unlock Your Academic Potential</h1>
     </header>
-    <div class="container">
-        <h2>Achieve Your Dream Grades!</h2>
-        <p>Struggling with coursework? Overwhelmed by exams? Imagine a world where studying feels effortless, your grades soar, and you excel with confidence. <span class="highlight">Your academic success starts here!</span></p>
 
-        <a href="#payment" class="btn">Sign Up Now</a>
-        <a href="#payment" class="btn">Make a Payment</a>
+    <!-- Message Section -->
+    <div class="message-section">
+        <h2>Why Choose Krish as Your Mentor?</h2>
+        <p>Krish brings years of experience, knowledge, and a passion for helping students succeed. With a proven track record, Krish's mentorship will provide you with the tools and strategies to excel academically and beyond.</p>
     </div>
 
+    <!-- Video Container -->
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/your-video-id" title="Introduction Video" allowfullscreen></iframe>
+    </div>
+
+    <!-- Call to Action Section -->
+    <div class="cta-container">
+        <h2>"Achieve Your Wildest Dreams with Krish as Your Mentor!"</h2>
+        <p>"Stand out and dominate your competition by achieving the top grades you’ve always dreamed of. Unlock success with personalized mentoring!"</p>
+        <a href="https://humixacademics.com#payment" class="btn">Join the Elite</a>
+        <a href="https://humixacademics.com#payment" class="btn">Make Your Payment Now</a>
+    </div>
+
+    <!-- Payment Section -->
     <div id="payment" class="payment-section">
-        <h2>Secure Payment</h2>
-        <form action="/submit-payment" method="POST">
+        <h2>"Claim your spot and crush your academic goals!"</h2>
+        <form action="https://humixacademics.com/submit-payment" method="POST">
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" placeholder="Enter your full name" required>
 
@@ -147,9 +261,9 @@
         </form>
     </div>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Unlock Your Academic Potential. All rights reserved. <br> <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        <p>&copy; 2024 Unlock Your Academic Potential. All rights reserved. <br> <a href="https://humixacademics.com/privacy-policy">Privacy Policy</a> | <a href="https://humixacademics.com/terms-of-service">Terms of Service</a></p>
     </footer>
 </body>
 </html>
-
