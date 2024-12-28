@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unlock Your Academic Potential - Tips for Success</title>
+    <title>Unlock Your Academic Potential</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         /* General Styles */
@@ -13,29 +13,55 @@
             margin: 0;
             padding: 0;
             color: #333;
-            background-color: #f4f4f4;
+            background-color: #f4f4f4; /* Light background for a clean look */
         }
 
         /* Header Styles */
         header {
-            background: #2c3e50;
+            background: #2c3e50; /* Solid dark background for a professional look */
             color: #fff;
-            padding: 3rem 1rem;
+            padding: 5rem 1rem;
             text-align: center;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-out;
         }
         header h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin: 0;
             color: #fff;
+            letter-spacing: 1px;
             text-transform: uppercase;
+            line-height: 1.2;
         }
 
-        /* Video Section */
+        /* Message Section */
+        .message-section {
+            padding: 3rem 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            color: #34495e;
+            animation: fadeIn 1s ease-out;
+        }
+        .message-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        .message-section p {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        /* Video Container */
         .video-container {
             text-align: center;
-            margin: 3rem auto;
+            margin: 2rem auto;
         }
         .video-container iframe {
             width: 100%;
@@ -44,28 +70,102 @@
             border: none;
             border-radius: 10px;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-out;
         }
 
-        /* Tips Section */
-        .tips-container {
+        /* Call to Action Section */
+        .cta-container {
             padding: 3rem 1rem;
             max-width: 900px;
             margin: 3rem auto;
-            text-align: left;
-            color: #34495e;
+            text-align: center;
+            animation: fadeIn 1s ease-out;
         }
-        .tips-container h2 {
+        .cta-container h2 {
             font-family: 'Montserrat', sans-serif;
             font-size: 2.5rem;
-            color: #2c3e50;
-            margin-bottom: 1rem;
+            color: #34495e;
+            margin-bottom: 1.5rem;
             font-weight: 600;
         }
-        .tips-container p {
+        .cta-container p {
             font-size: 1.2rem;
             color: #7f8c8d;
-            line-height: 1.6;
             margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background: #2980b9;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 30px;
+            margin: 1rem 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+            transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeIn 1s ease-out;
+        }
+        .btn:hover {
+            background: #3498db;
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Payment Section */
+        .payment-section {
+            background: #fff;
+            padding: 3rem;
+            margin: 3rem auto;
+            max-width: 600px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-out;
+        }
+        .payment-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        .payment-section form {
+            display: flex;
+            flex-direction: column;
+        }
+        .payment-section label {
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #34495e;
+        }
+        .payment-section input {
+            padding: 0.75rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        .payment-section input:focus {
+            border-color: #2980b9;
+        }
+        .payment-section button {
+            background: #2980b9;
+            color: #fff;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+        .payment-section button:hover {
+            background: #3498db;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
         }
 
         /* Footer */
@@ -76,6 +176,7 @@
             color: #fff;
             margin-top: 3rem;
             font-size: 1rem;
+            animation: fadeIn 1s ease-out;
         }
         footer a {
             color: #3498db;
@@ -84,46 +185,86 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            .cta-container {
+                padding: 2rem 1rem;
+            }
+            .btn {
+                font-size: 1.2rem;
+                padding: 0.75rem 1.5rem;
+            }
+            .payment-section {
+                padding: 2rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
     </style>
+    <script>
+        // Redirect to the specified URL after payment is successful
+        function redirectToWebsite() {
+            window.open("https://humixacademics.com", "_blank");
+        }
+    </script>
 </head>
 <body>
     <header>
         <h1>Unlock Your Academic Potential</h1>
     </header>
 
-    <!-- Video Section -->
+    <!-- Message Section -->
+    <div class="message-section">
+        <h2>Hello King</h2>
+        <p>It’s Krish here, ready to help you conquer your academic goals. In this course, I’ll reveal powerful strategies and techniques that will not only elevate your grades but also give you the edge over your competition. Based on my personal experience of transforming my GPA from 3.09(77.25%) to 4.0(100%) in just six months, I’m confident you’ll achieve even faster results. With expert insights and actionable steps, this course is designed to accelerate your academic success and set you on the path to excellence.</p>
+    </div>
+
+    <!-- Video Container -->
     <div class="video-container">
         <iframe src="https://www.youtube.com/embed/your-video-id" title="Introduction Video" allowfullscreen></iframe>
     </div>
 
-    <!-- Tips Section -->
-    <div class="tips-container">
-        <h2>Tips to Achieve Outstanding Academic Grades</h2>
-        <p>Improving your academic performance is not just about studying harder, but studying smarter. Here are seven proven strategies that will help you reach your academic goals:</p>
+    <!-- Call to Action Section -->
+    <div class="cta-container">
+        <h2>"Achieve Your Wildest Dreams with Krish as Your Mentor!"</h2>
+        <p>"Stand out and dominate your competition by achieving the top grades you’ve always dreamed of. Unlock success with personalized mentoring!"</p>
+        <a href="https://humixacademics.com#payment" class="btn">Join the Elite</a>
+        <a href="https://humixacademics.com#payment" class="btn">Make Your Payment Now</a>
+    </div>
 
-        <h3>1. Set Clear and Achievable Goals</h3>
-        <p>Setting clear, specific, and achievable goals is essential for academic success. Rather than aiming for vague objectives like "do well in school," break your goals down into smaller, measurable tasks. For example, set a goal to improve your grade in a particular subject by a specific percentage within a semester. This gives you a clear direction and makes it easier to track your progress. Remember to regularly review and adjust your goals as needed to stay on track.</p>
+    <!-- Payment Section -->
+    <div id="payment" class="payment-section">
+        <h2>"Claim your spot and crush your academic goals!"</h2>
+        <form action="https://humixacademics.com/submit-payment" method="POST" onsubmit="redirectToWebsite(); return false;">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
 
-        <h3>2. Create a Consistent Study Schedule</h3>
-        <p>Consistency is the key to mastering any subject. A study schedule helps you stay organized and ensures you cover all the material. Break your study time into manageable chunks, focusing on different subjects or topics each day. Make sure to allocate more time to subjects or areas you find more challenging. Stick to your schedule as much as possible, and don’t forget to include time for breaks. Consistent effort over time is far more effective than cramming before exams.</p>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-        <h3>3. Use Active Learning Techniques</h3>
-        <p>Active learning involves engaging with the material rather than passively reading or listening. This can include techniques such as summarizing what you’ve learned, teaching the material to someone else, or applying the concepts in real-world scenarios. These methods help reinforce your understanding and improve retention. For example, after reading a chapter, try to explain the key concepts to a friend or write a summary in your own words. This active engagement helps to solidify the information in your memory.</p>
+            <label for="card">Credit Card Number:</label>
+            <input type="text" id="card" name="card" placeholder="1234 5678 9012 3456" required>
 
-        <h3>4. Take Regular Breaks to Stay Fresh</h3>
-        <p>Studying for long hours without breaks can lead to burnout and decreased productivity. The Pomodoro Technique is a popular method where you study for 25 minutes and then take a 5-minute break. After four cycles, take a longer break of 15-30 minutes. This approach keeps your brain refreshed and helps maintain focus. During breaks, try to move around, stretch, or do something relaxing to recharge. This technique not only improves focus but also boosts your overall productivity.</p>
+            <label for="expiry">Expiry Date:</label>
+            <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
 
-        <h3>5. Stay Organized</h3>
-        <p>Staying organized is essential for academic success. Keep your study materials, notes, and assignments well-organized so you can easily access them when needed. Use folders, binders, or digital tools like Google Drive or Notion to keep track of your work. A clean, organized workspace also helps reduce distractions and creates a more productive environment. Take a few minutes each day to tidy up your study area and prepare for the next day’s work.</p>
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" placeholder="123" required>
 
-        <h3>6. Seek Help When You Need It</h3>
-        <p>Don’t be afraid to ask for help if you’re struggling with a topic. Whether it’s from a teacher, tutor, or classmate, getting clarification on difficult concepts can save you a lot of time and frustration. Joining study groups or seeking additional resources, like online tutorials or textbooks, can also provide valuable insights. Remember, everyone needs help at some point, and seeking assistance is a smart way to improve your understanding and performance.</p>
-
-        <h3>7. Take Care of Your Mental and Physical Health</h3>
-        <p>Academic success is not just about studying—it’s also about maintaining your overall well-being. Ensure you get enough sleep, eat nutritious food, and exercise regularly. A healthy body supports a healthy mind, and taking care of your mental health is just as important. Practice stress-management techniques such as mindfulness, meditation, or journaling. Staying mentally and physically healthy will help you stay focused, retain information better, and reduce feelings of anxiety or burnout.</p>
-
-        <p>By incorporating these tips into your routine, you’ll be well on your way to achieving outstanding academic grades. Remember, success is a journey, and with the right mindset and strategies, you can reach your full potential.</p>
-
+            <button type="submit">Pay Now</button>
+        </form>
     </div>
 
     <!-- Footer -->
