@@ -213,12 +213,6 @@
             }
         }
     </style>
-    <script>
-        // Redirect to the specified URL after payment is successful
-        function redirectToWebsite() {
-            window.open("https://humixacademics.com", "_blank");
-        }
-    </script>
 </head>
 <body>
     <header>
@@ -247,7 +241,7 @@
     <!-- Payment Section -->
     <div id="payment" class="payment-section">
         <h2>"Claim your spot and crush your academic goals!"</h2>
-        <form action="https://humixacademics.com/submit-payment" method="POST" onsubmit="redirectToWebsite(); return false;">
+        <form action="https://humixacademics.com/submit-payment" method="POST">
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" placeholder="Enter your full name" required>
 
